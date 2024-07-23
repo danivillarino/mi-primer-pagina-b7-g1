@@ -1,0 +1,526 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Fredoka+One&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap');
+/* poner un asterisco significa  "aplícalo a todo" */
+* {
+    box-sizing: border-box;
+}
+html{
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory;
+}
+main section{
+    /*main section indica que se aplican a todas las secciones dentro de main */
+    border-bottom: 1px solid white;
+    padding: 1rem;
+    height: 100vh;
+    scroll-snap-align: start;
+    text-align: center;
+    position: relative;
+    font-family: poppins;
+    
+    display: flex;
+    /* el display dice como se ordenan todos los elementos en el ordenador.
+    el flex te permite ordenar todo el contenido de manera independiente.
+    justify-content hace como alinear el contenido de manera VERTICAL
+    el align items alinea el contenido de manera HORIZONTAL
+    flex direction indica cómo quieres que proceda el siguiente termino hasta que se llene por completo la página. */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+main section h6{
+    margin: 5px 0;
+    text-transform: uppercase;
+    font-family: poppins;
+    font-size: 14px;
+}
+
+main section h3{
+    margin: 10px 0;
+    font-family: poppins;
+
+}
+main section p{
+    font-size: 14px;
+    line-height: 21px;
+    font-family: poppins;
+}
+.occupation{
+    text-decoration: underline;
+}
+main section h1{
+    /**Todos los h1 que se encuentren dentro de main sin importar la sección**/
+    position: absolute;
+    font-family: poppins;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: rgb(255, 96, 96);
+    width: 100%;
+    left: 0;
+    font-size: calc(1rem + 3vw);
+}
+.card-container{
+    background-color: rgb(255, 230, 230);
+    border-radius: 10px;
+    /* el border radius hace redondas las esquinas*/
+    box-shadow: 0px 10px 20px -10px
+    /* arriba, derecha, abajo, izquierda, siempre que tenga 4 es en ese orden*/
+    rgba(0,0,0,0.75);
+    /* el último número significa ALPHA, este define la opacidad de los colores
+    el .75 en la cuarta posición indica que tiene 75% de opacidad
+    los primeros 3 simbolizan red, green y blue */
+    color: #ff8e8e;
+    padding-top: 30px;
+    width: 350px; /* define el ancho de la carta/container */
+    max-width: 100%; /* indica que al  moverse o hacerse más grande la pantalla, el container no se va a modificar en cuestión de tamaño. */
+}
+.card-container .round{
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    padding: 5px;
+}
+button.primary{
+    /*el botón de la clase primary se modifica*/
+    background-color: #ffeeee;
+    border: 1px solid rgb(255, 131, 131);
+    border-radius: 3px;
+    color: #000000;
+    font-family: poppins;
+    font-weight: 500;
+    padding: 10px 25px;
+}
+button.primary:hover{
+    background-color: white;
+}
+.abtme{
+    text-align: center;
+    padding: 0px 15px;
+    margin-top: 30px;
+    font-family: poppins;
+}
+.abtme ul{
+    list-style-type: none;
+}
+.abtme ul li{
+    
+    display: flex;
+    
+    font-size: 16px;
+    margin: 0 7px 7px 0;
+    padding: 7px;
+
+}
+.hirotaka{
+  background-color: #c5e3ff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px -10px
+  rgba(0,0,0,0.75);
+  color: #5e82a3;
+  padding-top: 30px;
+  width: 350px; 
+  max-width: 100%; 
+}
+.hirotaka .round{
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 5px;
+}
+button.nifuji{
+  background-color: #ecf6ff;
+  border: 1px solid #5e82a3;
+  border-radius: 3px;
+  color: #000000;
+  font-family: poppins;
+  font-weight: 500;
+  padding: 10px 25px;
+}
+button.nifuji:hover{
+  background-color: white;
+}
+
+.reki{
+  background-color: #c80f0f ;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px -10px
+  rgba(0,0,0,0.75);
+  color: white;
+  padding-top: 30px;
+  width: 350px; 
+  max-width: 100%; 
+}
+.reki .round{
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 5px;
+}
+button.kyan{
+  background-color: #ff3b3b;
+  border: 1px solid #a30000;
+  border-radius: 3px;
+  color: #000000;
+  font-family: poppins;
+  font-weight: 500;
+  padding: 10px 25px;
+}
+button.kyan:hover{
+  background-color: rgb(255, 141, 141);
+}
+.ranpo{
+  background-color: #bea88f ;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px -10px
+  rgba(0,0,0,0.75);
+  color: #7e6c57;
+  padding-top: 30px;
+  width: 350px; 
+  max-width: 100%; 
+}
+.ranpo .round{
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 5px;
+}
+button.edogawa{
+  background-color: #d5c1a9;
+  border: 1px solid #80705e;
+  border-radius: 3px;
+  color: #000000;
+  font-family: poppins;
+  font-weight: 500;
+  padding: 10px 25px;
+}
+button.edogawa:hover{
+  background-color: #f9e7d0;
+}
+.narumi{
+  background-color: #ffcaca ;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px -10px
+  rgba(0,0,0,0.75);
+  color: #f48282;
+  padding-top: 30px;
+  width: 350px; 
+  max-width: 100%; 
+}
+.narumi .round{
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 5px;
+}
+button.momose{
+  background-color: #ffdcdc;
+  border: 1px solid #e3a7a7;
+  border-radius: 3px;
+  color: #000000;
+  font-family: poppins;
+  font-weight: 500;
+  padding: 10px 25px;
+}
+button.momose:hover{
+  background-color: white;
+}
+.yuu{
+  background-color: #ffb261 ;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px -10px
+  rgba(0,0,0,0.75);
+  color: black;
+  padding-top: 30px;
+  width: 350px; 
+  max-width: 100%; 
+}
+.yuu .round{
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  padding: 5px;
+}
+button.nishinoya{
+  background-color: #ffd2a2;
+  border: 1px solid #c1905b;
+  border-radius: 3px;
+  color: #000000;
+  font-family: poppins;
+  font-weight: 500;
+  padding: 10px 25px;
+}
+button.nishinoya:hover{
+  background-color: #ffead4;
+}
+#uno{
+    background-color: rgb(255, 210, 210);
+    
+}
+#dos{
+    background-color: #acd7ff;
+}
+#tres{
+    background-color: #e81818;
+
+}
+#cuatro{
+    background-color: #e0c8ac;
+
+}
+#cinco{
+    background-color: #ffdddd ;
+}
+#seis{
+  background-color: #ffc485;
+}
+#main2{
+    background-color: #f7f0ea;
+}
+.tortilla{
+    background: linear-gradient(180deg, rgba(198,177,160,1) 34%, rgba(246,235,225,1) 34%);
+    border-radius: 50px;
+    /* el border radius hace redondas las esquinas*/
+    box-shadow: 0px 10px 20px -10px
+    /* arriba, derecha, abajo, izquierda, siempre que tenga 4 es en ese orden*/
+    rgba(0,0,0,0.75);
+    /* el último número significa ALPHA, este define la opacidad de los colores
+    el .75 en la cuarta posición indica que tiene 75% de opacidad
+    los primeros 3 simbolizan red, green y blue */
+    color: #000000;
+    width: 810px; /* define el ancho de la carta/container */
+    max-width: 100%; /* indica que al  moverse o hacerse más grande la pantalla, el container no se va a modificar en cuestión de tamaño. */
+    
+} 
+.dani{
+    font-family: 'fredoka one';
+    font-size: 30px;
+}
+.gaegu{
+    font-family: 'gaegu';
+    font-size: 25px;
+    padding: 0 30px;
+}
+button.primary7{
+    background-color:#c6b5a6;
+    border: 3px solid #9c9187;
+    border-radius: 3px;
+    color: #000000;
+    font-family: gaegu;
+    font-weight: 800;
+    padding: 10px 100px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.primary7:hover{
+  background-color: white;
+}
+.tortilla2{
+    background-color:rgba(246,235,225,1);
+    border-radius: 50px;
+    /* el border radius hace redondas las esquinas*/
+    box-shadow: 0px 10px 20px -10px
+    /* arriba, derecha, abajo, izquierda, siempre que tenga 4 es en ese orden*/
+    rgba(0,0,0,0.75);
+    /* el último número significa ALPHA, este define la opacidad de los colores
+    el .75 en la cuarta posición indica que tiene 75% de opacidad
+    los primeros 3 simbolizan red, green y blue */
+    color: #000000;
+    width: 1080px; /* define el ancho de la carta/container */
+    max-width: 100%; /* indica que al  moverse o hacerse más grande la pantalla, el container no se va a modificar en cuestión de tamaño. */
+    padding: 30px;
+} 
+.round1{
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    padding: 5px;
+}
+.round1{
+    text-align: left;
+}
+.buttons2{
+    padding: 20px;
+}
+button.primary1{
+    /*el botón de la clase primary se modifica*/
+    background-color:#c6b5a6;
+    border: 3px solid #9c9187;
+    border-radius: 10px;
+    color: #000000;
+    font-family: gaegu;
+    font-weight: 800;
+    padding: 100px 40px;
+    font-size: 30px;
+    margin-right: 10px;
+}
+.primary1 {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .primary1:hover, .primary1:focus, .primary1:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    background-image: url(https://c.tenor.com/8QjHm3JvkwcAAAAC/itadori-yuji.gif);
+    background-size: 270px;
+    background-position-x: center;
+    color: transparent;
+  }
+  button.primary2{
+    background-color:#c6b5a6;
+    border: 3px solid #9c9187;
+    border-radius: 10px;
+    color: #000000;
+    font-family: gaegu;
+    font-weight: 800;
+    padding: 100px 30px;
+    font-size: 30px;
+    margin-right: 10px;
+}
+  .primary2 {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .primary2:hover, .primary2:focus, .primary2:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    background-image: url(https://c.tenor.com/ldEBB7vQ5-8AAAAC/juliadesuu-hirotaka.gif);
+    background-size: 270px;
+    background-position-x: center;
+    color: transparent;
+  }
+
+  button.primary3{
+    background-color:#c6b5a6;
+    border: 3px solid #9c9187;
+    border-radius: 10px;
+    color: #000000;
+    font-family: gaegu;
+    font-weight: 800;
+    padding: 100px 60px;
+    font-size: 30px;
+    margin-right: 10px;
+}
+  .primary3 {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .primary3:hover, .primary3:focus, .primary3:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    background-image: url(https://c.tenor.com/ya9tAsiykLwAAAAC/reki-kyan-sk8sk8theinfinity-peace.gif);
+    background-size: 330px;
+    background-position-x: center;
+    color: transparent;
+  }
+  button.primary4{
+    background-color:#c6b5a6;
+    border: 3px solid #9c9187;
+    border-radius: 10px;
+    color: #000000;
+    font-family: gaegu;
+    font-weight: 800;
+    padding:100px 25px;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+  .primary4 {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .primary4:hover, .primary4:focus, .primary4:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    background-image: url(https://c.tenor.com/Us_02U7RUkMAAAAC/bsd-bungoustraydogs.gif);
+    background-size: 450px;
+    background-position-x: center;
+    color: transparent;
+  }
+  button.primary5{
+    background-color:#c6b5a6;
+    border: 3px solid #9c9187;
+    border-radius: 10px;
+    color: #000000;
+    font-family: gaegu;
+    font-weight: 800;
+    padding:100px 23px;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+  .primary5 {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .primary5:hover, .primary5:focus, .primary5:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    background-image: url(https://c.tenor.com/MMGUYwxryxIAAAAC/narumi-momose-anime.gif);
+    background-size: 430px;
+    background-position-x: center;
+    color: transparent;
+  }
+  button.primary6{
+    background-color:#c6b5a6;
+    border: 3px solid #9c9187;
+    border-radius: 10px;
+    color: #000000;
+    font-family: gaegu;
+    font-weight: 800;
+    padding:100px 35px;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+  .primary6 {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .primary6:hover, .primary6:focus, .primary6:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    background-image: url(https://c.tenor.com/0c00LBlFkxIAAAAC/nishinoya-noya.gif);
+    background-size: 300px;
+    background-position-x: center;
+    color: transparent;
+  }
+
