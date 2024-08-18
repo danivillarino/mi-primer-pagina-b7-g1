@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Fredoka+One&family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap');
-/* poner un asterisco significa  "aplícalo a todo" */
+/** poner un asterisco significa  "aplícalo a todo" **/
 * {
     box-sizing: border-box;
 }
@@ -11,7 +11,7 @@ html{
     scroll-snap-type: y mandatory;
 }
 main section{
-    /*main section indica que se aplican a todas las secciones dentro de main */
+    /**main section indica que se aplican a todas las secciones dentro de main **/
     border-bottom: 1px solid white;
     padding: 1rem;
     height: 100vh;
@@ -300,7 +300,7 @@ button.nishinoya:hover{
 button.primary7{
     background-color:#c6b5a6;
     border: 3px solid #9c9187;
-    border-radius: 3px;
+    border-radius: 5px;
     color: #000000;
     font-family: gaegu;
     font-weight: 800;
